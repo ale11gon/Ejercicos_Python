@@ -3,24 +3,19 @@ from tkinter import ttk
 
 window = tkinter.Tk()
 
-def reiniciar(event):
-	r1.deselect()
-  r2.deselect()
-  r3.deselect()
+def Reiniciar():
+    window.destroy()
+    window = Tk()
+    window.mainloop()
 
-windwow.columnconfigure(0,weight=1)
-windwow.columnconfigure(1,weight=3)
+window.columnconfigure(0,weight=1)
+window.columnconfigure(1,weight=3)
 
-#Crear una variable a elegir entre 3 posibilidades
 selected = tk.StringVar()
 
 r1 = ttk.Radiobutton(window, text= "Opción 1", value="1", variable = selected)
 r2 = ttk.Radiobutton(window, text= "Opción 2", value="2", variable = selected)
 r3 = ttk.Radiobutton(window, text= "Opción 3", value="3", variable = selected)
-
-r1.deselect()
-r2.deselect()
-r3.deselect()
 
 r1.grid(column=0, row=0, padx=5, pady=5)
 r2.grid(column=0, row=1, padx=5, pady=5)
